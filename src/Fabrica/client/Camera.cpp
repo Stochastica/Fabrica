@@ -12,7 +12,7 @@ glm::mat4 Camera::matrix(float aspectRatio) const noexcept
 	                        aspectRatio, .1f, 100.f);
 	// World space to View space
 	glm::mat4 mView = glm::eulerAngleXY(pitch, yaw);
-	glm::mat4 mTranslate = glm::translate(glm::mat4(1.f), glm::vec3(position));
+	glm::mat4 mTranslate = glm::translate(glm::mat4(1.f), -glm::vec3(position));
 
 	return mProjection * mView * mTranslate;
 }

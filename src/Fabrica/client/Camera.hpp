@@ -28,8 +28,8 @@ public:
 	 */
 	void translatePara(float p) noexcept
 	{
-		position.x -= p * std::sin(yaw);
-		position.z += p * std::cos(yaw);
+		position.x += p * std::sin(yaw);
+		position.z -= p * std::cos(yaw);
 	}
 	/**
 	 * Move perpendicular to facing

@@ -90,9 +90,9 @@ void Client::execDraw()
 			else if (interactions.moveBack)
 				camera.translatePara(-config->naviSpeedPara * duration);
 			if (interactions.moveLeft)
-				camera.translatePerp(config->naviSpeedPerp* duration);
-			else if (interactions.moveRight)
 				camera.translatePerp(-config->naviSpeedPerp* duration);
+			else if (interactions.moveRight)
+				camera.translatePerp(config->naviSpeedPerp* duration);
 			if (interactions.moveUp)
 				camera.translateVert(config->naviSpeedVert * duration);
 			if (interactions.moveDown)
